@@ -1,3 +1,4 @@
-value=int(input("enter a value"))
-print(value)
-# print("saikumar")
+# value=int(input("enter a value"))
+# print(value)
+# # print("saikumar")
+table=3
