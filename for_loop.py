@@ -11,8 +11,14 @@
 
 
 # same example using for loop
-data= [80,"hlo", 90, "sai", 100, "kumar"]
-for item in data:
-    if isinstance(item, (str)):
-      print(item)
+# data= [80,"hlo", 90, "sai", 100, "kumar"]
+# for item in data:
+#     if isinstance(item, (str)):
+#       print(item)
 
+# for loop using range function
+
+data= [80,"hlo", 90, "sai", 100, "kumar"]
+
+for i in range(len(data)):
+    print(data[i])
