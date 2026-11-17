@@ -18,7 +18,12 @@
 
 # for loop using range function
 
-data= [80,"hlo", 90, "sai", 100, "kumar"]
+# data= [80,"hlo", 90, "sai", 100, "kumar"]
 
-for i in range(len(data)):
-    print(data[i])
+# for i in range(len(data)):
+#     print(data[i])
+
+for i in range(10):
+    if i % 2 == 0:
+      continue
+    print(i)  
