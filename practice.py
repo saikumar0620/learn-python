@@ -64,8 +64,28 @@
 
 # sum of natural numbers
 
-number=0
-for i in range(1,101):
-  number= number+i
-print(number)
-  
+# number=0
+# for i in range(1,101):
+#   number= number+i
+# print(number)
+
+
+# reverse of a number
+# number=123
+
+# approch one 
+# while number > 0:
+#   digit=number % 10
+#   print(digit)
+#   number= number//10
+
+# approch two
+number =12345
+reversed=0
+while number > 0:
+  digit=number % 10
+  reversed=reversed*10+digit
+  number=number // 10
+print(reversed)
+
+
