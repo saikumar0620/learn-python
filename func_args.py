@@ -16,7 +16,17 @@
 
 
 # function with keyword arguments
-def person(name,age):
+# def person(name,age):
+#   print("name : ",name)
+#   print("age : ",age)
+# details=person(age="24",name="sai")
+
+
+#  when it comes to an real time example like an pizzza order with all the essenstials
+
+def orderDetails(name,**kwlenargs):
   print("name : ",name)
-  print("age : ",age)
-details=person(age="24",name="sai")
+  for keys , args in kwlenargs.items():
+    print(keys," : ",args)
+  
+orderDetails(name="sai",address="hyd",pin=500081)
