@@ -12,11 +12,14 @@
 #  sum of three digits number
 
 
-# num= 123
-# hundreds= num // 100
-# tens= (num // 10) % 10
-# ones= num % 10
-# total= hundreds+tens+ones
+num= 123
+hundreds= num // 100
+tens= (num // 10) % 10
+ones= num % 10
+total= hundreds+tens+ones
+print(hundreds)
+print(tens)
+print(ones)
 # print("the sum of toatl digits:", total)
 
 
