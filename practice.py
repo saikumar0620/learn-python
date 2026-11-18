@@ -42,3 +42,30 @@
 # for num in range(1,101):
 #   total=num+total
 # print(total)
+
+
+# simple multiplication table 
+
+# tablenum=2
+# for i in range(1,11):
+#   res=tablenum*i
+#   print(tablenum,"X",i,"=",res)
+
+
+# sum of three digits
+
+# num = 123
+
+# hundreds=num // 100
+# tens=(num // 10)%10
+# ones= num %10
+# digits=hundreds+tens+ones
+# print("the sum of three digits are : ",digits)
+
+# sum of natural numbers
+
+number=0
+for i in range(1,101):
+  number= number+i
+print(number)
+  
