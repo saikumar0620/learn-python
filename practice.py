@@ -109,10 +109,18 @@
   
   # fact of num usingb recursion
   
-def rec(number):
-  if number == 1:
-    return number
-  return number*rec(number-1)
+# def rec(number):
+#   if number == 1:
+#     return number
+#   return number*rec(number-1)
 
-res=rec(5)
-print(res)
+# res=rec(5)
+# print(res)
+from functools import reduce
+
+ns=[2,3,4,45,5]
+def fn(a,b):
+  return a+b
+
+sum=reduce(fn,ns)
+print(sum)
