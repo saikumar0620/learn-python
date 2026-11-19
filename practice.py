@@ -116,11 +116,10 @@
 
 # res=rec(5)
 # print(res)
-from functools import reduce
 
-ns=[2,3,4,45,5]
-def fn(a,b):
-  return a+b
-
-sum=reduce(fn,ns)
-print(sum)
+num=[1323,432,4534,54,67,567,67]
+bigst=num[0]
+for n in num:
+  if n > bigst:
+    bigst=n
+print(bigst)
