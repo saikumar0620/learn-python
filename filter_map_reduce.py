@@ -20,7 +20,24 @@
 
 
 # filter method by using lambda function
-nums=[123,34,5,656,7,8,734,4,4,242,3,12,332]
+# nums=[123,34,5,656,7,8,734,4,4,242,3,12,332]
 # filt= lambda n: n%2==0  # this is the one expression 
-res= list(filter(lambda n: n%2==0,nums)) #this is the another way of putting expression written into a one line 
-print(res) 
+# filtered= list(filter(lambda n: n%2==0,nums)) #this is the another way of putting expression written into a one line 
+#  #this is the another way of putting expression written into a one line 
+# doubled=list(map(lambda n: n*2 ,filtered))
+# maxnum=list(reduce(lambda a,b:,nums))
+# print(filtered) 
+# print(doubled)  
+ 
+ 
+      
+#  biggest number in a list  
+  
+nums=[123,34,5,5676]
+big=nums[0]
+for n in nums:
+  if n > big:
+    big=n
+print(big)
+
+
