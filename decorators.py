@@ -1,41 +1,43 @@
 
-# #  decorator define  one way
-# def deco(fucn):
-#   def wrapper(a,b):
-#     if a <b:
-#       a,b=b,a
-#     return fucn(a,b)
-#   return wrapper
-  
 
-# # @deco
-# # def div(a,b):
-# #   return a/b
-# # @deco
-# # def add(a,b):
-# #   return a+b
-# @deco
-# def sub(a,b):
-#   return a-b
+#  decorator define  one way
+def log_info(fucn):
+  def wrap(*args,**kwargs):
+    print("the value are :",args)
+    result=fucn(*args)
+    print("the result is :",result)
+    return result
+  return wrap
+    
 
-# divd_res=div(4,2)
-# print(divd_res)
-# # add_res=add(4,2)
-# # print(add_res)
-# # sub_res=sub(2,4)
-# # print(sub_res)
-
-# decorator define 2nd approch
-
-def greater_first(fncn):
-  def wrapper(a,b):
-      if a<b:
-        a,b=b,a
-      return fncn(a,b)
+def greater_first(fucn):
+  def wrapper(*args):
+    args=list(args)
+    if len(args)>=2 and args[0] < args[1]:
+    # if a <b:
+      args[0],args[1] =args[1],args[0]
+      # a,b=b,a
+    return fucn(*args)
   return wrapper
 
-def add(a,b):
-  return a+b
-add=greater_first(add)
-res1=add(2,3)
-print(res1)
+@log_info
+@greater_first
+def div(a,b,c):
+  return a+b+c
+divd_res=div(4,2,4)
+
+# @log_info
+# @deco
+# def div(a,b):
+#   return a/b
+
+# @log_info
+# @deco
+# def add(a,b):
+#   return a+b
+
+# print(divd_res)
+# add_res=add(4,2)
+# print(add_res)
+# sub_res=sub(2,4)
+# print(sub_res)
