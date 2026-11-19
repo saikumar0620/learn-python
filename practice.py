@@ -80,12 +80,39 @@
 #   number= number//10
 
 # approch two
-number =12345
-reversed=0
-while number > 0:
-  digit=number % 10
-  reversed=reversed*10+digit
-  number=number // 10
-print(reversed)
+# number =12345
+# reversed=0
+# while number > 0:
+#   digit=number % 10
+#   reversed=reversed*10+digit
+#   number=number // 10
+# print(reversed)
 
 
+# reverse
+
+# num=123
+# while num > 0:
+#   digit= num % 10
+#   print(digit)
+#   num=num // 10
+
+# 2nd approch
+# num =123
+# reversed=0
+# while num > 0:
+#   digit=num%10
+#   reversed=reversed*10+digit
+#   num=num // 10
+# print(reversed)
+  
+  
+  # fact of num usingb recursion
+  
+def rec(number):
+  if number == 1:
+    return number
+  return number*rec(number-1)
+
+res=rec(5)
+print(res)
