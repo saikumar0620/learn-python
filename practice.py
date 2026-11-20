@@ -117,10 +117,21 @@
 # res=rec(5)
 # print(res)
 
-# bigg in list
-num=[456,78,899]
-biggeest=num[0]
-for i in num:
- if i>biggeest:
-   biggeest=i
-print(biggeest)
+# lambda fn
+
+def swape_1st(fn):
+  def wrapper(*args):
+    args=list(args)
+    
+    if len(args)>=2 and args[0]< args[1]:
+      args[0],args[1]=args[1], args[0]
+      # a,b=b,a
+    return fn(*args)
+  return wrapper
+    
+      
+@swape_1st
+def add(a,b,c,d):
+  return a+b+c+d
+res=add(6,7,8,9)
+print(res)
