@@ -117,9 +117,10 @@
 # res=rec(5)
 # print(res)
 
-num=[1323,432,4534,54,67,567,67]
-bigst=num[0]
-for n in num:
-  if n > bigst:
-    bigst=n
-print(bigst)
+# bigg in list
+num=[456,78,899]
+biggeest=num[0]
+for i in num:
+ if i>biggeest:
+   biggeest=i
+print(biggeest)
