@@ -119,19 +119,9 @@
 
 # lambda fn
 
-def swape_1st(fn):
-  def wrapper(*args):
-    args=list(args)
-    
-    if len(args)>=2 and args[0]< args[1]:
-      args[0],args[1]=args[1], args[0]
-      # a,b=b,a
-    return fn(*args)
-  return wrapper
-    
-      
-@swape_1st
-def add(a,b,c,d):
-  return a+b+c+d
-res=add(6,7,8,9)
-print(res)
+# reverse of an int
+num = 234
+while num > 0:
+  rev= num% 10
+  print(rev)
+  num=num // 10
