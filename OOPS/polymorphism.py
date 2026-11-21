@@ -1,8 +1,14 @@
 #  polymorphism
 class human:
-  def sai(self):
-    print("sai called")
+  def speak(self):
+    return"showting"
     
 class animal:
-  def cat(self):
+  def speak(self):
+    return"meow meow"
     
+    
+things=[human(),animal()]
+print(things)
+for i in things:
+  print(i.speak())
