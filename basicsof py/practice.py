@@ -119,12 +119,12 @@
 
 # recursion learn
 
-# num=5
+num=5
 def recur(num):
   if num== 1:
     return 1
   return num*recur(num-1)
 
 
-res=recur(5)
+res=recur(num)
 print(res)
