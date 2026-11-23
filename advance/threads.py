@@ -60,7 +60,8 @@ if __name__=='__main__':
     download(f)
   end=time()
   
-  print(f"the parellel excecution taken time is {end - start:.2f}")
+  print(f"the parellel excecution taken time is {end - start
+        :.2f}")
 
   
   Threads=[]
