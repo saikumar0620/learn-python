@@ -76,4 +76,38 @@ if __name__=='__main__':
   print(f"the parellel excecution with threads taken time is {end - start:.2f}")
     
     
-    
+import urllib.request
+from concurrent.futures import ThreadPoolExecutor
+from time import time
+
+# Real URLs mapped to local filenames
+files_to_download = [
+    ("https://jsonplaceholder.typicode.com/posts", "posts.json"),
+    ("https://jsonplaceholder.typicode.com/comments", "comments.json"),
+    ("https://jsonplaceholder.typicode.com/users", "users.json"),
+]
+
+def download(file_info):
+    url, save_as = file_info
+    print(f"Starting download: {save_as}")
+    try:
+        # Actually fetches the data from the web and saves it to disk
+        urllib.request.urlretrieve(url, save_as)
+        print(f"Done: {save_as}")
+    except Exception as e:
+        print(f"Failed {save_as}: {e}")
+
+if __name__ == "__main__":
+    # 1. Sequential Execution (One by one)
+    start = time()
+    for item in files_to_download:
+        download(item)
+    end = time()
+    print(f"\nSequential time taken: {end - start:.2f} seconds\n")
+
+    # 2. Threaded Execution (Concurrent)
+    start = time()
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        executor.map(download, files_to_download)
+    end = time()
+    print(f"\nThreaded time taken: {end - start:.2f} seconds")
