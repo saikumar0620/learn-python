@@ -9,6 +9,6 @@ class animal:
     
     
 things=[human(),animal()]
-print(things)
+# print(things)
 for i in things:
   print(i.speak())
