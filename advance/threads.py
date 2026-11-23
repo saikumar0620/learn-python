@@ -60,20 +60,20 @@ if __name__=='__main__':
     download(f)
   end=time()
   
-  print(f"the parellel excecution taken time is {start-end:.2f}")
+  print(f"the parellel excecution taken time is {end - start:.2f}")
 
   
   Threads=[]
   for f in files:
     t=Thread(target=download,args=(f,))
     Threads.append(t)
-    start=time()
+  start=time()
   for t in Threads:
     t.start()
   for t in Threads:
     t.join()
   end=time()
-  print(f"the parellel excecution with threads taken time is {start - end:.2f}")
+  print(f"the parellel excecution with threads taken time is {end - start:.2f}")
     
     
     
