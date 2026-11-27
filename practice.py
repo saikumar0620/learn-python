@@ -1,8 +1,9 @@
-# factorial of n
-n=5
+# biggest number in list 
+nums = [12,4,3545,3564,534,5,3]
 
-for i in n:
-  res=n*i
-  
-print(res)
+big=nums[0]
 
+for i in nums:
+  if i>big:
+    big=i
+print(big)
