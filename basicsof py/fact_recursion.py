@@ -24,3 +24,4 @@ def rec(num):
   return num*rec(num -1)
 res=rec(5)
 print(res)
+
