@@ -22,5 +22,5 @@ def rec(num):
   if num == 1:
     return 1
   return num*rec(num -1)
-res=rec(1)
+res=rec(5)
 print(res)
